@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
 const cheerio = require('cheerio');
+const port = process.env.PORT || 5050 ;
 
 const app = express();
 
@@ -11,6 +12,12 @@ app.use(express.static('public'));
 app.use(express.static(__dirname));
 app.use(express.json());
 app.use(express.text());
+
+
+app.get("/" , (req , res)=>{
+
+    res.send("Hello MotherFucker") ;
+})
 
 
 // ===============================
@@ -158,7 +165,7 @@ app.post("/getData", async (req, res) => {
 // START SERVER
 // ===============================
 
-app.listen(5050, "0.0.0.0", () => {
+app.listen(port, "0.0.0.0", () => {
 
     console.log(
         "Server Running on Port 5050"
