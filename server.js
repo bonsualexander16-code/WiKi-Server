@@ -122,7 +122,7 @@ app.post("/getData", async (req, res) => {
         if (imURL) {
 
             imgUrl =
-                "http://localhost:5050/image?url=" +
+                "https://wek.onrender.com/image?url=" +
                 encodeURIComponent(imURL);
 
 
